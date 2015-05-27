@@ -142,9 +142,14 @@ resources:
             sudo apt-get install python-numpy -y
             sudo apt-get install python-matplotlib -y
 
-            # Install Pandas, Pydoop
+            # Install Pandas
             sudo pip install pandas
-
+            #Install Pydoop
+            git clone https://github.com/crs4/pydoop.git
+            cd /root/pydoop
+            python setup.py install
+          
+          
             # Install Scikit-learn
             sudo pip install -U scikit-learn
 
