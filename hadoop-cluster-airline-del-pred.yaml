@@ -1,4 +1,4 @@
-heat_template_version: 2013-05-23
+t_template_version: 2013-05-23
 
 description: Hadoop cluster with OpenStack Heat
 
@@ -46,16 +46,14 @@ resources:
             chmod 600 /root/.ssh/id_rsa
 
             useradd -m ubuntu
-            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) 
-NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
+            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
             curl -L https://www.opscode.com/chef/install.sh | bash
             wget http://github.com/opscode/chef-repo/tarball/master
             tar -zxf master
             mv *-chef-repo-* /home/ubuntu/chef-repo
             rm master
             mkdir /home/ubuntu/chef-repo/.chef
-            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" 
-> /home/ubuntu/chef-repo/.chef/knife.rb
+            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" > /home/ubuntu/chef-repo/.chef/knife.rb
             knife cookbook site download java
             knife cookbook site download apt
             knife cookbook site download yum
@@ -101,8 +99,7 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => 
-"hadoop1"
+                                    "yarn.resourcemanager.hostname" => "hadoop1"
                                     }
                         }
                         )
@@ -119,15 +116,12 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
 
             cat << EOL > /home/ubuntu/chef-repo/solo.json
             {
-                    "run_list": [ "role[java]", "recipe[java]", 
-"role[hadoop]", "recipe[hadoop::hadoop_hdfs_namenode]",
-                            "recipe[hadoop::hadoop_yarn_nodemanager]", 
-"recipe[hadoop::hadoop_yarn_resourcemanager]" ]
+                    "run_list": [ "role[java]", "recipe[java]", "role[hadoop]", "recipe[hadoop::hadoop_hdfs_namenode]",
+                            "recipe[hadoop::hadoop_yarn_nodemanager]", "recipe[hadoop::hadoop_yarn_resourcemanager]" ]
             }
             EOL
 
-            chef-solo -j /home/ubuntu/chef-repo/solo.json -c 
-/home/ubuntu/chef-repo/solo.rb
+            chef-solo -j /home/ubuntu/chef-repo/solo.json -c /home/ubuntu/chef-repo/solo.rb
             /etc/init.d/hadoop-hdfs-namenode init
             service hadoop-hdfs-namenode start
             /usr/lib/hadoop/libexec/init-hdfs.sh
@@ -182,16 +176,14 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
             chmod 600 /root/.ssh/id_rsa
 
             useradd -m ubuntu
-            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) 
-NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
+            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
             curl -L https://www.opscode.com/chef/install.sh | bash
             wget http://github.com/opscode/chef-repo/tarball/master
             tar -zxf master
             mv *-chef-repo-* /home/ubuntu/chef-repo
             rm master
             mkdir /home/ubuntu/chef-repo/.chef
-            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" 
-> /home/ubuntu/chef-repo/.chef/knife.rb
+            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" > /home/ubuntu/chef-repo/.chef/knife.rb
             knife cookbook site download java
             knife cookbook site download apt
             knife cookbook site download yum
@@ -237,8 +229,7 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => 
-"hadoop1"
+                                    "yarn.resourcemanager.hostname" => "hadoop1"
                                     }
                         }
                         )
@@ -255,13 +246,11 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
 
             cat << EOL > /home/ubuntu/chef-repo/solo.json
             {
-                      "run_list": [ "role[java]", "recipe[java]", 
-"role[hadoop]",  "recipe[hadoop::hadoop_hdfs_datanode]" ]
+                      "run_list": [ "role[java]", "recipe[java]", "role[hadoop]",  "recipe[hadoop::hadoop_hdfs_datanode]" ]
             }
             EOL
 
-            chef-solo -j /home/ubuntu/chef-repo/solo.json -c 
-/home/ubuntu/chef-repo/solo.rb
+            chef-solo -j /home/ubuntu/chef-repo/solo.json -c /home/ubuntu/chef-repo/solo.rb
             service hadoop-hdfs-datanode start
 
           params:
@@ -287,16 +276,14 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
             chmod 600 /root/.ssh/id_rsa
 
             useradd -m ubuntu
-            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) 
-NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
+            echo -e "\n# User rules for ubuntu\nubuntu ALL=(ALL) NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
             curl -L https://www.opscode.com/chef/install.sh | bash
             wget http://github.com/opscode/chef-repo/tarball/master
             tar -zxf master
             mv *-chef-repo-* /home/ubuntu/chef-repo
             rm master
             mkdir /home/ubuntu/chef-repo/.chef
-            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" 
-> /home/ubuntu/chef-repo/.chef/knife.rb
+            echo "cookbook_path [ '/home/ubuntu/chef-repo/cookbooks' ]" > /home/ubuntu/chef-repo/.chef/knife.rb
             knife cookbook site download java
             knife cookbook site download apt
             knife cookbook site download yum
@@ -342,8 +329,7 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => 
-"hadoop1"
+                                    "yarn.resourcemanager.hostname" => "hadoop1"
                                     }
                         }
                         )
@@ -360,13 +346,11 @@ NOPASSWD:ALL" >>  /etc/sudoers.d/90-cloud-init-users
 
             cat << EOL > /home/ubuntu/chef-repo/solo.json
             {
-                      "run_list": [ "role[java]", "recipe[java]", 
-"role[hadoop]",  "recipe[hadoop::hadoop_hdfs_datanode]" ]
+                      "run_list": [ "role[java]", "recipe[java]", "role[hadoop]",  "recipe[hadoop::hadoop_hdfs_datanode]" ]
             }
             EOL
 
-            hadoop3=$(ifconfig eth0 | awk -F':' '/inet 
-addr/{split($2,_," ");print _[1]}')
+            hadoop3=$(ifconfig eth0 | awk -F':' '/inet addr/{split($2,_," ");print _[1]}')
             cat << EOF > /etc/hosts.hadoop
             
             # internal network addresses for hadoop cluster
@@ -375,16 +359,11 @@ addr/{split($2,_," ");print _[1]}')
             $hadoop3 hadoop3
             EOF
             cat /etc/hosts.hadoop >> /etc/hosts
-            scp -q -o UserKnownHostsFile=/dev/null -o 
-StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop1:/etc/hosts.hadoop
-            scp -q -o UserKnownHostsFile=/dev/null -o 
-StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop2:/etc/hosts.hadoop
-            ssh -q -o UserKnownHostsFile=/dev/null -o 
-StrictHostKeyChecking=no $hadoop1 "cat /etc/hosts.hadoop >> /etc/hosts"
-            ssh -q -o UserKnownHostsFile=/dev/null -o 
-StrictHostKeyChecking=no $hadoop2 "cat /etc/hosts.hadoop >> /etc/hosts"
-            chef-solo -j /home/ubuntu/chef-repo/solo.json -c 
-/home/ubuntu/chef-repo/solo.rb
+            scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop1:/etc/hosts.hadoop
+            scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop2:/etc/hosts.hadoop
+            ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $hadoop1 "cat /etc/hosts.hadoop >> /etc/hosts"
+            ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $hadoop2 "cat /etc/hosts.hadoop >> /etc/hosts"
+            chef-solo -j /home/ubuntu/chef-repo/solo.json -c /home/ubuntu/chef-repo/solo.rb
             service hadoop-hdfs-datanode start
           params:
             $hadoop1: { get_attr: [ hadoop1, first_address ] }
