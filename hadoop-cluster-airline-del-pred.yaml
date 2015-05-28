@@ -142,8 +142,15 @@ resources:
             sudo apt-get install python-numpy -y
             sudo apt-get install python-matplotlib -y
 
-            # Install Pandas
+            # Install Pandas, libatlas-base-dev, gfortran 
             sudo pip install pandas
+            sudo apt-get install libatlas-base-dev gfortran -y
+            sudo pip install scipy 
+
+            # Install Ipython
+            sudo pip install "ipython[notebook]"
+
+
             #Install Pydoop
             git clone https://github.com/crs4/pydoop.git
             cd /root/pydoop
