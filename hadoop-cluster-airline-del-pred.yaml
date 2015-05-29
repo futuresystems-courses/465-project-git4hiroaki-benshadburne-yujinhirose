@@ -160,6 +160,14 @@ resources:
             # Install Scikit-learn
             sudo pip install -U scikit-learn
 
+            # Data load
+            cd ~
+            mkdir -p airline/delay 
+            cd airline/delay
+            wget  http://stat-computing.org/dataexpo/2009/2007.csv.bz2
+            bunzip2 2007.csv.bz2
+
+
 
           params:
             $publickey: { get_param: PublicKeyString }
