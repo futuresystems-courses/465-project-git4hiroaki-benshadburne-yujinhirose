@@ -12,6 +12,15 @@ parameters:
   PrivateKeyString:
     type: string
     description: a private key string
+  Hadoop1Name:
+    type: string
+    description: holds Hadoop1's name
+  Hadoop2Name:
+    type: string
+    description: holds Hadoop2's name
+  Hadoop3Name:
+    type: string
+    description: holds Hadoop3's name
 
 resources:
   security_group:
@@ -33,7 +42,7 @@ resources:
       key_name: { get_param: KeyName }
       image: "futuresystems/ubuntu-14.04"
       flavor: "m1.small"
-      name: hadoop1
+      name: { get_param: Hadoop1Name }
       security_groups:
         - "default"
         - { get_resource: security_group }
@@ -183,7 +192,7 @@ resources:
       key_name: { get_param: KeyName }
       image: "futuresystems/ubuntu-14.04"
       flavor: "m1.small"
-      name: hadoop2
+      name: { get_param: Hadoop2Name }
       security_groups:
         - "default"
         - { get_resource: security_group }
@@ -283,7 +292,7 @@ resources:
       key_name: { get_param: KeyName }
       image: "futuresystems/ubuntu-14.04"
       flavor: "m1.small"
-      name: hadoop3
+      name: { get_param: Hadoop3Name }
       security_groups:
         - "default"
         - { get_resource: security_group }
@@ -390,4 +399,3 @@ resources:
             $hadoop2: { get_attr: [ hadoop2, first_address ] }
             $publickey: { get_param: PublicKeyString }
             $privatekey: { get_param: PrivateKeyString }
-
