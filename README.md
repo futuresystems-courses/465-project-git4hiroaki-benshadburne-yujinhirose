@@ -9,9 +9,10 @@ Cloudmesh is installed
 ## 3 Installation Instructions
 1. Make a copy of our project library from github. It can be found at
 https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
-```
 Example command to copy library:
-git clone github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
+
+```
+git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
 2. Change directories into our project folder.
 
