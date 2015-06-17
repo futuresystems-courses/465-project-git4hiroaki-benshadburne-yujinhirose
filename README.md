@@ -11,7 +11,6 @@ Cloudmesh is installed
 https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 
 Example command to copy library:
-
 ```
 git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
