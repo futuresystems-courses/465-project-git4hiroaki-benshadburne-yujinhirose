@@ -114,7 +114,7 @@ resources:
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => "hadoop1"
+                                    "yarn.resourcemanager.hostname" => "$Hadoop1Name"
                                     }
                         }
                         )
@@ -272,7 +272,7 @@ resources:
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => "hadoop1"
+                                    "yarn.resourcemanager.hostname" => "$Hadoop1Name"
                                     }
                         }
                         )
@@ -378,7 +378,7 @@ resources:
                             "fs.defaultFS" => "hdfs://hadoop1"
                             },
                             "yarn_site" => {
-                                    "yarn.resourcemanager.hostname" => "hadoop1"
+                                    "yarn.resourcemanager.hostname" => "Hadoop1Name"
                                     }
                         }
                         )
@@ -403,9 +403,9 @@ resources:
             cat << EOF > /etc/hosts.hadoop
             
             # internal network addresses for hadoop cluster
-            $hadoop1 hadoop1
-            $hadoop2 hadoop2
-            $hadoop3 hadoop3
+            $hadoop1 Hadoop1Name # replaced by new hostname e.g. Hadoop1Name
+            $hadoop2 Hadoop2Name 
+            $hadoop3 Hadoop3Name
             EOF
             cat /etc/hosts.hadoop >> /etc/hosts
             scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop1:/etc/hosts.hadoop
