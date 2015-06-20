@@ -18,39 +18,45 @@ class cm_shell_python_analyze:
 
           Usage:
               python_analyze load -f FILE
-              python_analyze deploy
+              python_analyze deploy_pydoop NAME [--count=N] 
               python_analyze stop
               python_analyze do_analysis
               python_analyze visualize
 
-          tests via ping if the host ith the give NAME is reachable
-
           Arguments:
 
-            NAME      Name of the machine to test
-            FILE      Name of the file to be loaded
+            NAME      Name of the clusters for Pydoop
+            FILE      Name of the file to be downloaded
 
           Options:
 
              -v       verbose mode
-             -f       specify the file
+             -f       specify the file 
 
           Example:
 
-               python_analyze load -f [ABC file]
+              python_analyze load -f [ABC file]
 
                      executes the python_analyze load command with the givenname
 
+              python_analyze deploy_pydoop pydoop-cluster-ABC [--count=N] 
 
-
-
-
+                      deploy the N virtual cluster for Pydoop along with Hadoop
 
         """
         # pprint(arguments)
 
         if arguments["NAME"] is None:
             Console.error("Please specify a host name")
+        elif arguments['deploy_pydoop']:
+          Console.ok("Start to deploy Pydoop")
+
+          # Insert the argument into input for deploy_cluster
+          name = arguments['NAME']
+
+          # Deploy 3 virtual cluster using heat
+          command_python_analyze.deploy_cluster(name) # see deploy_cluster in "command_python_analyze.py" 
+
         else:
             host = arguments["NAME"]
             Console.info("trying to reach {0}".format(host))
