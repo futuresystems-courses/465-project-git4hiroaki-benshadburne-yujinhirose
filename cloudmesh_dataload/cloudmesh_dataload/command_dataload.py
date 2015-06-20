@@ -1,5 +1,5 @@
 from cloudmesh_base.Shell import Shell
-
+import os
 
 class command_dataload(object):
 
@@ -16,3 +16,21 @@ class command_dataload(object):
             return False
         else:
             return False
+
+    @classmethod
+    def dataload(cls, src_url="http://stat-computing.org/dataexpo/2009/2007.csv.bz2"):
+        print("Downloading the data source ugins wget")
+
+        # Download the data from provided URL site
+        os.system("wget " + src_url)
+        return 1
+
+
+
+
+
+
+
+
+
+
