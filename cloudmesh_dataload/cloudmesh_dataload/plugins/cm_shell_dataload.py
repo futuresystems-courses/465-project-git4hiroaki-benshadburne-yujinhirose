@@ -21,7 +21,6 @@ class cm_shell_dataload:
 	            dataload start --url=U
               dataload delete FileName
 
-
           Arguments:
             FileName      Name of the downloaded file to be deleted
 
@@ -31,7 +30,10 @@ class cm_shell_dataload:
         """
         if arguments['start']:
             Console.ok("Starting to download the data source from your specified URL")
-            str_url = arguments['--url']
+            Console.ok("[Default url is: http://stat-computing.org/dataexpo/2009/2007.csv.bz2]")
+            str_url = arguments['--url'] or "http://stat-computing.org/dataexpo/2009/2007.csv.bz2"
+
+            # Download the file 
             command_dataload.dataload(str_url)
 
         elif arguments['delete']:
