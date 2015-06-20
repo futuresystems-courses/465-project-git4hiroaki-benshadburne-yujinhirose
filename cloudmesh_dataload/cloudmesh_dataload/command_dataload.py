@@ -26,6 +26,18 @@ class command_dataload(object):
         return 1
 
 
+    @classmethod
+    def delete(cls, file_name):
+        print("Deleting downloaded data")
+
+        os.system("rm -r" + file_name)
+        return 1
+
+
+
+
+
+
 
 
 
