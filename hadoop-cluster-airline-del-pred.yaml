@@ -137,7 +137,8 @@ resources:
             EOL
 
             chef-solo -j /home/ubuntu/chef-repo/solo.json -c /home/ubuntu/chef-repo/solo.rb
-            /etc/init.d/hadoop-hdfs-namenode init
+            # /etc/init.d/hadoop-hdfs-namenode init # not in use init command anymore 
+            su hdfs -c "hadoop namenode -format"
             service hadoop-hdfs-namenode start
             /usr/lib/hadoop/libexec/init-hdfs.sh
 
