@@ -187,6 +187,10 @@ resources:
           params:
             $publickey: { get_param: PublicKeyString }
             $privatekey: { get_param: PrivateKeyString }
+            $Hadoop1Name: { get_param: Hadoop1Name }
+            $Hadoop2Name: { get_param: Hadoop2Name }
+            $Hadoop3Name: { get_param: Hadoop3Name }
+
   association:
     type: OS::Nova::FloatingIPAssociation
     properties:
@@ -299,6 +303,8 @@ resources:
           params:
             $publickey: { get_param: PublicKeyString }
             $privatekey: { get_param: PrivateKeyString }
+            $Hadoop1Name: { get_param: Hadoop1Name }
+
 
   hadoop3:
     type: OS::Nova::Server
@@ -419,3 +425,4 @@ resources:
             $hadoop2: { get_attr: [ hadoop2, first_address ] }
             $publickey: { get_param: PublicKeyString }
             $privatekey: { get_param: PrivateKeyString }
+            $Hadoop1Name: { get_param: Hadoop1Name }
