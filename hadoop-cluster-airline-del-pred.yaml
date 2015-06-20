@@ -161,7 +161,7 @@ resources:
             # Install Pandas, libatlas-base-dev, gfortran 
             sudo pip install pandas
             sudo apt-get install libatlas-base-dev gfortran -y
-            sudo pip install scipy 
+            sudo pip install scipy
 
             # Install Ipython
             sudo pip install "ipython[notebook]"
@@ -171,11 +171,8 @@ resources:
             git clone https://github.com/crs4/pydoop.git
             cd /pydoop
             export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_45/
-
-
             python setup.py install
-          
-          
+
             # Install Scikit-learn
             sudo pip install -U scikit-learn
 
