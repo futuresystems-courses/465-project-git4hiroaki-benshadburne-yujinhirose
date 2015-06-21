@@ -31,7 +31,7 @@ class command_python_analyze(object):
         # Run heat command to create virtual clusters
         # os.system("heat stack-create -u https://raw.githubusercontent.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose/master/hadoop-cluster-airline-del-pred.yaml -P "KeyName=hshioi-india-key;PublicKeyString=`cat ~/.ssh/id_rsa.pub`;PrivateKeyString=`cat ~/.ssh/id_rsa`" heat-hadoop-cluster-$PORTALNAME")
         # os.system("heat stack-create -u https://raw.githubusercontent.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose/5eaa96873642d7b7499cc04a77cf6ca2d5af9f7d/hadoop-cluster-airline-del-pred.yaml -P "KeyName=hshioi-india-key;PublicKeyString=`cat ~/.ssh/id_rsa.pub`;PrivateKeyString=`cat ~/.ssh/id_rsa`" heat-hadoop-cluster-$PORTALNAME")
-        os.system('heat stack-create -u https://raw.githubusercontent.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose/master/hadoop-cluster-airline-del-pred.yaml -P "KeyName=hshioi-india-key;PublicKeyString=`cat ~/.ssh/id_rsa.pub`;PrivateKeyString=`cat ~/.ssh/id_rsa`;Hadoop1Name='Master';Hadoop2Name='Slave1';Hadoop3Name='Slave2'" heat-pydoop-cluster')
+        os.system('heat stack-create -u https://raw.githubusercontent.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose/master/hadoop-cluster-airline-del-pred.yaml -P "KeyName=hshioi-india-key;PublicKeyString=`cat ~/.ssh/id_rsa.pub`;PrivateKeyString=`cat ~/.ssh/id_rsa`;Hadoop1Name=Master;Hadoop2Name=Slave1;Hadoop3Name=Slave2" heat-pydoop-cluster-$PORTALNAME')
 
         # If user input the location of public/private key
         # name = arguments['NAME'] # Arbitrary name e.g., heat-hadoop-cluster-hshioi0620'

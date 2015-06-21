@@ -71,6 +71,7 @@ resources:
             knife cookbook site download sysctl 
             knife cookbook site download selinux 
             knife cookbook site download ulimit
+            knife cookbook site download pig
             tar -zxf java* -C /home/ubuntu/chef-repo/cookbooks
             tar -zxf apt* -C /home/ubuntu/chef-repo/cookbooks
             tar -zxf yum* -C /home/ubuntu/chef-repo/cookbooks
@@ -79,6 +80,7 @@ resources:
             tar -zxf sysctl* -C /home/ubuntu/chef-repo/cookbooks
             tar -zxf selinux* -C /home/ubuntu/chef-repo/cookbooks
             tar -zxf ulimit* -C /home/ubuntu/chef-repo/cookbooks
+            tar -zxf pig* -C /home/ubuntu/chef-repo/cookbooks            
             rm -rf java*.tar.gz
             rm -rf apt*.tar.gz
             rm -rf yum*.tar.gz
@@ -87,6 +89,7 @@ resources:
             rm -rf sysctl*.tar.gz
             rm -rf selinux*.tar.gz
             rm -rf ulimit*.tar.gz
+            rm -rf pig*.tar.gz
             cat << EOL > /home/ubuntu/chef-repo/roles/java.rb
             name "java"
             description "Install Oracle Java"
@@ -248,6 +251,10 @@ resources:
             rm -rf selinux*.tar.gz
             rm -rf ulimit*.tar.gz
 
+            # pig installation
+            knife cookbook site download pig
+            tar -zxf pig* -C /home/ubuntu/chef-repo/cookbooks 
+            rm -rf pig*.tar.gz
 
             cat << EOL > /home/ubuntu/chef-repo/roles/java.rb
             name "java"
@@ -351,12 +358,17 @@ resources:
             rm -rf hadoop*.tar.gz
             rm -rf ohai*.tar.gz
             rm -rf sysctl*.tar.gz
+            
+            # selinux, ulimit, pig installation
             knife cookbook site download selinux 
             knife cookbook site download ulimit
+            knife cookbook site download pig
             tar -zxf selinux* -C /home/ubuntu/chef-repo/cookbooks
             tar -zxf ulimit* -C /home/ubuntu/chef-repo/cookbooks
+            tar -zxf pig* -C /home/ubuntu/chef-repo/cookbooks 
             rm -rf selinux*.tar.gz
             rm -rf ulimit*.tar.gz
+            rm -rf pig*.tar.gz
             cat << EOL > /home/ubuntu/chef-repo/roles/java.rb
             name "java"
             description "Install Oracle Java"
@@ -409,12 +421,24 @@ resources:
             cat << EOF > /etc/hosts.hadoop
             
             # internal network addresses for hadoop cluster
-            $hadoop1 Hadoop1Name # replaced by new hostname e.g. Hadoop1Name
-            $hadoop2 Hadoop2Name 
-            $hadoop3 Hadoop3Name
+            $hadoop1 $Hadoop1Name # replaced by new hostname e.g. Hadoop1Name
+            $hadoop2 $Hadoop2Name 
+            $hadoop3 $Hadoop3Name
             EOF
             cat /etc/hosts.hadoop >> /etc/hosts
+
+
+            # # ----  Example of file contents ---- 
+            # # internal network addresses for hadoop cluster
+            # 10.23.1.47 Hadoop1Name # replaced by new hostname e.g. Hadoop1Name
+            # 10.23.1.48 Hadoop2Name
+            # 10.23.1.5 Hadoop3Name
+            # # -------------------------------------
+
+            # Transfer hosts information into master and slave(s)
             scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop1:/etc/hosts.hadoop
+            #scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop ec2-user@10.23.1.47:/etc/hosts.hadoop
+
             scp -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no /etc/hosts.hadoop $hadoop2:/etc/hosts.hadoop
             ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $hadoop1 "cat /etc/hosts.hadoop >> /etc/hosts"
             ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $hadoop2 "cat /etc/hosts.hadoop >> /etc/hosts"
