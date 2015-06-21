@@ -15,20 +15,30 @@ The goal of this project is to automate the task of creating virtual clusters on
 
 
 
-## 2 Cloudmesh-plugin dataload instruction
+## 2 Cloudmesh-plugin dataload instruction (Yujin)
+
 Cloudmesh is installed
 
-### 2-1 Pre-requisite
+### 2-1 Pre-requisite    
 
 
-### 2-2 Installation instruction
+### 2-2 Step-by-step installation manual
 
 
 ### 2-1 Usage
 
 
 
-## 3 Cloudmesh-plugin python_analze instruction
+## 3 Cloudmesh-plugin python_analze instruction (Yujin )
+
+### 2-1 Pre-requisite    
+
+
+### 2-2 Step-by-step installation manual 
+
+
+### 2-1 Usage
+
 
 
 1. Make a copy of our project library from github. It can be found at
@@ -49,5 +59,18 @@ cd github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
 source start-cluster.sh
 ```
+## 4 Heat-temlate
+
+
+2.	Create VM using OpenStack 
+
+3.	Install OpenStack or Openstack client on VM
+
+4.	Deploy 3-nodes Hadoop cluster with Python Libries
+
+5.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
+
+
+## 5 Reference
 
 
