@@ -3,6 +3,18 @@
 ## 1 Goal & Project Overview
 The goal of this project is to automate the task of creating virtual clusters on OpenStack and installing Apache Hadoop on the clusters. In addition we automize process importing airline data and utilize Python useful libraries to predict airline delays. 
 
+
+1. Take raw data of page view statistics from airline database http://stat-computing.org/dataexpo/2009/the-data.html Dataset is related to airline statistics from 1987 to 2008 (i.e. date, Departure time, Tail Num, AirTime, Destination) 
+2.	Create VM using OpenStack 
+3.	Install OpenStack or Openstack client on VM
+4.	Deploy 3-nodes Hadoop cluster with Python Libries
+5.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
+6.	Transform raw data into reasonable feature using Pig - skip
+7.	Execute python analysis code on a virtual cluster using Python libraries - skip
+8.	Output on command line
+
+
+
 ## 2 Pre-requisites
 Cloudmesh is installed
 
