@@ -23,9 +23,9 @@ class command_python_analyze(object):
         print("Setting up virtual clusters and install Hadoop")
 
         # Start ssh-agent and resgister the RSA keys
-        os.system("eval $(ssh-agent -s)")
-        os.system("ssh-add ~/.ssh/id_rsa")
-
+        #os.system("eval $(ssh-agent -s)")
+        #os.system("ssh-add ~/.ssh/id_rsa")
+            # -self note: include in the documentation
 
 
         # Run heat command to create virtual clusters
