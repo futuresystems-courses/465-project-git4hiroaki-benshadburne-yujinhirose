@@ -11,6 +11,6 @@ Heat_PrivateKey='cat $Heat_PrivateKey'
 
 echo Creating Heat Stack for $Heat_Username
 
-heat stack-create --template-file sample.yaml -P "KeyName=id_rsa;PublicKeyString=$Heat_PublicKey;PrivateKeyString=$Heat_PrivateKey;Hadoop1Name=$Hadoop1Name;Hadoop2Name=$Hadoop2Name;Hadoop3Name=$Hadoop3Name" flight-analysis-hadoop-cluster-$Heat_Username
+heat stack-create --template-file hadoop-cluster-airline-del-pred.yaml -P "KeyName=id_rsa;PublicKeyString=$Heat_PublicKey;PrivateKeyString=$Heat_PrivateKey;Hadoop1Name=$Hadoop1Name;Hadoop2Name=$Hadoop2Name;Hadoop3Name=$Hadoop3Name" flight-analysis-hadoop-cluster-$Heat_Username
 
 
