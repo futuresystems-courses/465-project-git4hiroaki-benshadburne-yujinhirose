@@ -4,7 +4,7 @@
 The goal of this project is to automate the task of creating virtual clusters on OpenStack and installing Apache Hadoop on the clusters. In addition we automize process importing airline data and utilize Python useful libraries to predict airline delays. 
 
 
-1. Take raw data of page view statistics from airline database http://stat-computing.org/dataexpo/2009/the-data.html Dataset is related to airline statistics from 1987 to 2008 (i.e. date, Departure time, Tail Num, AirTime, Destination) 
+1.      Take raw data of page view statistics from airline database http://stat-computing.org/dataexpo/2009/the-data.html Dataset is related to airline statistics from 1987 to 2008 (i.e. date, Departure time, Tail Num, AirTime, Destination) 
 2.	Create VM using OpenStack 
 3.	Install OpenStack or OpenStack client on VM
 4.	Deploy 3-nodes Hadoop cluster with Python libraries
@@ -25,7 +25,7 @@ Cloudmesh is installed
 ### 2-2 Step-by-step installation manual
 
 
-### 2-1 Usage
+### 2-3 Usage
 
 
 
@@ -55,12 +55,17 @@ git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-
 cd github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
 
-3) Run bash file for setup "start-clusters.sh" on your bash.
+3) Edit the config.sh file to add in your username, location of public key and location of private key.
+
+```
+nano config.sh
+```
+
+4) Run bash file for setup "start-clusters.sh" on your bash.
+
 ```
 source start-cluster.sh
 ```
-3.1) Enter your username, location of your publickey and location of 
-your privatekey.
 
 ## 4 Heat-temlate
 
