@@ -74,9 +74,12 @@ source start-cluster.sh
 ## 5 Reference
 
 
-Predicting Airline Delays with Hadoop: http://cloudmesh.github.io/introduction_to_cloud_computing/projects/sample_project_airline_delays.html
-OpenStack clients: https://github.com/openstack/python-heatclient
+- Predicting Airline Delays with Hadoop: http://cloudmesh.github.io/introduction_to_cloud_computing/projects/sample_project_airline_delays.html
 
-Pig: http://pig.apache.org/docs/r0.7.0/setup.html
-Hadoop: http://hadoop.apache.org/
-Pydoop: http://crs4.github.io/pydoop/installation.html
+- OpenStack clients: https://github.com/openstack/python-heatclient
+
+- Pig: http://pig.apache.org/docs/r0.7.0/setup.html
+
+ - Hadoop: http://hadoop.apache.org/
+
+- Pydoop: http://crs4.github.io/pydoop/installation.html
