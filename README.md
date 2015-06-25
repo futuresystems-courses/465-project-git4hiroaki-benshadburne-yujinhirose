@@ -76,6 +76,8 @@ source start-cluster.sh
 
 - Project reference "Predicting Airline Delays with Hadoop": http://cloudmesh.github.io/introduction_to_cloud_computing/projects/sample_project_airline_delays.html
 
+- Heat teamplate deploying hadoop clusters:  https://github.com/cloudmesh/cloudmesh/blob/master/heat-templates/ubuntu-14.04/hadoop-cluster/hadoop-cluster.yaml 
+
 - OpenStack clients: https://github.com/openstack/python-heatclient
 
 - Pig: http://pig.apache.org/docs/r0.7.0/setup.html
