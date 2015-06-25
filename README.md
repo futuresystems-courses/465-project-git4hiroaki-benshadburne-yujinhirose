@@ -31,44 +31,47 @@ Cloudmesh is installed
 
 ## 3 Cloudmesh-plugin python_analze instruction (Yujin )
 
-### 2-1 Pre-requisite    
+### 3-1 Pre-requisite    
 
 
-### 2-2 Step-by-step installation manual 
+### 3-2 Step-by-step installation manual 
 
 
-### 2-1 Usage
+### 3-3 Usage
 
 
 
-1. Make a copy of our project library from github. It can be found at
+1) Make a copy of our project library from github. It can be found at
 https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 
 Example command to copy library:
 ```
 git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
-2. Change directories into our project folder.
+
+2) Change directories into our project folder.
 
 ```
 cd github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 ```
 
-
-3. Run bash file for setup "start-clusters.sh" on your bash.
+3) Run bash file for setup "start-clusters.sh" on your bash.
 ```
 source start-cluster.sh
 ```
+3.1) Enter your username, location of your publickey and location of 
+your privatekey.
+
 ## 4 Heat-temlate
 
 
-2.	Create VM using OpenStack 
+1.	Create VM using OpenStack 
 
-3.	Install OpenStack or Openstack client on VM
+2.	Install OpenStack or Openstack client on VM
 
-4.	Deploy 3-nodes Hadoop cluster with Python Libries
+3.	Deploy 3-nodes Hadoop cluster with Python Libries
 
-5.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
+4.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
 
 
 ## 5 Reference
