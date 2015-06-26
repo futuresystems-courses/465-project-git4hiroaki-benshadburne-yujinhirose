@@ -34,7 +34,16 @@ Cloudmesh is installed
 ### 3-1 Pre-requisite    
 
 
-### 3-2 Step-by-step installation manual 
+### 3-2 Setup OpenStack Heat client
+
+Download your OpenStack RC file from Horizon. 
+
+1. Choose your project and go to "Compute" -> Access and Security"
+
+2. In API access tab, click "Download OpenStack RC File"
+
+3. Copy and paste your openrc.sh file into your vm you will run OpenStack commands  
+
 
 
 ### 3-3 Usage
