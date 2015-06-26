@@ -42,7 +42,23 @@ Download your OpenStack RC file from Horizon.
 
 2. In API access tab, click "Download OpenStack RC File"
 
-3. Copy and paste your openrc.sh file into your vm you will run OpenStack commands  
+3. Copy and paste your openrc.sh file into "~/.bash_profile" on your virtual machine in which you will run OpenStack commands  
+
+4. Read openrc.sh parameters 
+
+
+```
+source ~/.bash_profile
+chmod 600 ~/.bash_profile
+source ~/.bashrc
+
+```
+
+5. Install OpenStack Heat Client using pip
+
+```
+sudo pip install python-heatclient
+```
 
 
 
