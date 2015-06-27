@@ -25,16 +25,13 @@ The goal of this project is to automate the task of creating virtual clusters on
 
 ### 2-2 Step-by-step installation manual
 
-1. Clone repository to your local directory adn move on `cloudmesh_dataload` directory
+Clone repository to your local directory adn move on `cloudmesh_dataload` directory, and move on that directory. Then install the cloudmesh_dataload plugin.
 
-```
-git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
-cd 465-project-git4hiroaki-benshadburne-yujinhirose/cloudmesh_dataload
-```
-
-2.  `python setup.py install`
-3.  `cd ..`
-4.  `cm dataload install`
+1. `git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git`
+2. `cd 465-project-git4hiroaki-benshadburne-yujinhirose/cloudmesh_dataload`
+3. `python setup.py install`
+4. `cd ..`
+5. `cm dataload install`
 
 ### 2-3 Usage
 
