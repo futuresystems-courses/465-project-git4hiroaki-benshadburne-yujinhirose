@@ -47,7 +47,7 @@ sudo pip install python-heatclient
 When you install cloudmesh, 'cm-iu user fetch', 'cm-iu user create' are supposed to copy your "openrc.sh" file from india to your virtual machine. 
 
 ```
-source  ~/.cloudmesh/clouds/india/openrc.sh  
+vm$ source  ~/.cloudmesh/clouds/india/openrc.sh  
 ```
 3. Set "OS_CACERT" variable
 
@@ -55,20 +55,20 @@ We need to copy certification information from india, which is specified by "OS_
 
 In Idia, 
 ```
-cat $OS_CACERT
+india$ cat $OS_CACERT
 ```
 
-Copy it and paste to ~/.cloudmesh/clouds/india/juno/cacert.pem
+In your vm, copy it and paste to ~/.cloudmesh/clouds/india/juno/cacert.pem
 
 ```
-mkdir ~/.cloudmesh/clouds/india/juno # create juno directory
-nano ~/.cloudmesh/clouds/india/juno/cacert.pem # Paste "cacert.pem" from india
+vm$ mkdir ~/.cloudmesh/clouds/india/juno # create juno directory
+vm$ nano ~/.cloudmesh/clouds/india/juno/cacert.pem # Paste "cacert.pem" from india
 ```
 
-4. Test heat commands 
+4. Test heat commands in your vm
 
 ```
-heat stack-list
+vm$ heat stack-list
 ```
 
 * reference: http://docs.rackspace.com/orchestration/api/v1/orchestration-getting-started/content/Install_Heat_Client.html
