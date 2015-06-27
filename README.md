@@ -54,9 +54,9 @@ source  ~/.cloudmesh/clouds/india/openrc.sh
 We need to copy certification information from india, which is specified by "OS_CACERT" in "openrc.sh".
 
 In Idia, 
-***
+```
 cat $OS_CACERT
-***
+```
 
 Copy it and paste to ~/.cloudmesh/clouds/india/juno/cacert.pem
 
