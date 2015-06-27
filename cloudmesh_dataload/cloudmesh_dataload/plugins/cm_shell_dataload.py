@@ -19,10 +19,10 @@ class cm_shell_dataload:
         ::
           Usage:
 	            dataload start --url=U
-              dataload delete FileName
+	            dataload delete NAME
 
           Arguments:
-            FileName      Name of the downloaded file to be deleted
+            NAME      Name of the downloaded file to be deleted
 
           Options:
 	           --url=U   Data source of URL
@@ -38,15 +38,10 @@ class cm_shell_dataload:
 
         elif arguments['delete']:
             Console.ok("Deleting downloaded source data")
-            command_dataload.delete()
+            delete_file = arguments['Filename']
+            command_dataload.delete(delete_file)
         else:
-            host = arguments['NAME']
-            Console.info("trying to reach {0}".format(host))
-            status = command_dataload.status(host)
-            if status:
-                Console.info("machine " + host + " has been found. ok.")
-            else:
-                Console.error("machine " + host + " not reachable. error.")
+            Console.error("Invalid dataload command. Please see 'cm dataload'")
         pass
 
 if __name__ == '__main__':
