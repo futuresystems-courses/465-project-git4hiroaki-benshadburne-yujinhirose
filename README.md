@@ -105,6 +105,9 @@ nano config.sh
 source start-cluster.sh
 ```
 
+If you succeed to run this command appropriately, you can find your stack, named "flight-analysis-hadoop-[your name]" by 'heat stack-list'
+
+
 ## 4 Heat-temlate
 
 
