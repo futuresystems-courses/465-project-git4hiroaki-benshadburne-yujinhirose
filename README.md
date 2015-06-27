@@ -47,7 +47,9 @@ This cm dataload command will start to download the data source by using `wget`.
 This cm dataload command will delete your data source specified by `NAME`.
 
 
-## 3 Cloudmesh-plugin python_analze instruction
+## 3 Automatic deployment for analysis environment with Pydoop
+
+This section describes how to automatically deploy your analysis environment where Hadoop, Pig and other python libraries such as Pandas, Scikit-learn, Numpy, Matplotlib. Pydoop using OpenStack Heat. 
 
 ### 3-1 Pre-requisite    
 
@@ -122,17 +124,6 @@ source start-cluster.sh
 If you succeed to run this command appropriately, you can find your stack, named "flight-analysis-hadoop-[your name]" by `heat stack-list`
 
 
-## 4 Heat-temlate
-
-
-1.	Create VM using OpenStack 
-
-2.	Install OpenStack or Openstack client on VM
-
-3.	Deploy 3-nodes Hadoop cluster with Python Libries
-
-4.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
-
 
 ## Data source
 The data is Airline on-time performance data since our focus is to automate construction process for predicting airline delays. You can choose data source from 1987 to 2008 ([data source link]( http://stat-computing.org/dataexpo/2009/the-data.html)) Each of the data field is described as well.
@@ -146,10 +137,12 @@ The data is Airline on-time performance data since our focus is to automate cons
 
 ## Technologies
 
-* Hadoop
-* HDFS
+* OpenStack 
+* OpenStack Heat client
+* Cloudmesh
+* Hadoop & HDFS
 * Pig
-* Python with libraries (e.g., Pandas, Scikit-learn, Numpy, Matplotlib. PyDoop)
+* Python with libraries (e.g., Pandas, Scikit-learn, Numpy, Matplotlib. Pydoop)
 
 
 
