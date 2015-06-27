@@ -30,7 +30,7 @@ Clone repository to your local directory adn move on `cloudmesh_dataload` direct
 
 1. `git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git`
 2. `cd 465-project-git4hiroaki-benshadburne-yujinhirose/cloudmesh_dataload`
-3. Add `    - cloudmesh_deploy.plugins` as the last sentencein `~/.cloudmesh/cmd3.yaml` 
+3. Add `    - cloudmesh_deploy.plugins` as the last sentencein in `~/.cloudmesh/cmd3.yaml` 
 4. `python setup.py install`
 5. `cm plugins add cloudmesh_dataload`
 
