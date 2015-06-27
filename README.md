@@ -58,7 +58,7 @@ In Idia,
 india$ cat $OS_CACERT
 ```
 
-In your vm, copy it and paste to ~/.cloudmesh/clouds/india/juno/cacert.pem
+In your vm, paste the content of cacert.pem to ~/.cloudmesh/clouds/india/juno/cacert.pem
 
 ```
 vm$ mkdir ~/.cloudmesh/clouds/india/juno # create juno directory
