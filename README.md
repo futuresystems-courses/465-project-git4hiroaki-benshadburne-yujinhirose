@@ -49,7 +49,7 @@ This cm dataload command will delete your data source specified by `NAME`.
 
 ## 3 Automatic deployment for analysis environment with Pydoop
 
-This section describes how to automatically deploy your analysis environment where Hadoop, Pig and other python libraries such as Pandas, Scikit-learn, Numpy, Matplotlib. Pydoop using OpenStack Heat. 
+This section describes how to automatically deploy your analysis environment where Hadoop, Pig and other python libraries such as Pandas, Scikit-learn, Numpy, Matplotlib, Pydoop using OpenStack Heat. 
 
 ### 3-1 Pre-requisite    
 
