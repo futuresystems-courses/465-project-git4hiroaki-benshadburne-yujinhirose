@@ -36,11 +36,11 @@ Clone repository to your local directory adn move on `cloudmesh_dataload` direct
 
 ### 2-3 Usage
 
-`cm dataload start [-url=U]`
+- `cm dataload start [-url=U]`
 
 This cm dataload command will start to download the data source by using `wget`. Default URL is set http://stat-computing.org/dataexpo/2009/2007.csv.bz2 but you can specify a URL of data source by using `-url=U` option.
 
-`cm dataload delete NAME`
+- `cm dataload delete NAME`
 
 This cm dataload command will delete your data source specified by `NAME`.
 
