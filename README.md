@@ -15,24 +15,44 @@ The goal of this project is to automate the task of creating virtual clusters on
 
 
 
-## 2 Cloudmesh-plugin dataload instruction (Yujin)
+## 2 Cloudmesh-plugin dataload instruction
 
-Cloudmesh is installed
+
 
 ### 2-1 Pre-requisite    
 
+* Cloudmesh is installed
 
 ### 2-2 Step-by-step installation manual
 
+1. Clone repository to your local directory adn move on `cloudmesh_dataload` directory
+
+```
+git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
+cd 465-project-git4hiroaki-benshadburne-yujinhirose/cloudmesh_dataload
+```
+
+2.  `python setup.py install`
+3.  `cd ..`
+4.  `cm dataload install`
 
 ### 2-3 Usage
 
+`cm dataload start [-url=U]`
+
+This cm dataload command will start to download the data source by using `wget`. Default URL is set http://stat-computing.org/dataexpo/2009/2007.csv.bz2 but you can specify a URL of data source by using `-url=U` option.
+
+`cm dataload delete NAME`
+
+This cm dataload command will delete your data source specified by `NAME`.
 
 
-## 3 Cloudmesh-plugin python_analze instruction (Yujin )
+## 3 Cloudmesh-plugin python_analze instruction
 
 ### 3-1 Pre-requisite    
 
+* Cloudmesh installed on your virtual machine
+* OpenStack accounts  
 
 ### 3-2 Setup OpenStack Heat client
 
