@@ -6,7 +6,7 @@ The goal of this project is to automate the task of creating virtual clusters on
 
 1.      Take raw data of page view statistics from airline database http://stat-computing.org/dataexpo/2009/the-data.html Dataset is related to airline statistics from 1987 to 2008 (i.e. date, Departure time, Tail Num, AirTime, Destination) 
 2.	Create VM using OpenStack 
-3.	Install OpenStack or OpenStack client on VM
+3.	Install OpenStack Heat client on your VM
 4.	Deploy 3-nodes Hadoop cluster with Python libraries
 5.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
 6.	Transform raw data into reasonable feature using Pig - skip
