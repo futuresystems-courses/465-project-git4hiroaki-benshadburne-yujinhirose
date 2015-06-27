@@ -36,31 +36,42 @@ Cloudmesh is installed
 
 ### 3-2 Setup OpenStack Heat client
 
-Download your OpenStack RC file from Horizon. 
-
-1. Choose your project and go to "Compute" -> Access and Security"
-
-2. In API access tab, click "Download OpenStack RC File"
-
-3. Copy and paste your openrc.sh file into "~/.bash_profile" on your virtual machine in which you will run OpenStack commands  
-
-4. Read openrc.sh parameters 
-
-
-```
-source ~/.bash_profile
-chmod 600 ~/.bash_profile
-source ~/.bashrc
-
-```
-
-5. Install OpenStack Heat Client using pip
+1. Install OpenStack Heat Client using pip
 
 ```
 sudo pip install python-heatclient
 ```
 
+2. Read environment variables from openrc.sh
 
+When you install cloudmesh, 'cm-iu user fetch', 'cm-iu user create' are supposed to copy your "openrc.sh" file from india to your virtual machine. 
+
+```
+source  ~/.cloudmesh/clouds/india/openrc.sh  
+```
+3. Set "OS_CACERT" variable
+
+We need to copy certification information from india, which is specified by "OS_CACERT" in "openrc.sh".
+
+In Idia, 
+***
+cat $OS_CACERT
+***
+
+Copy it and paste to ~/.cloudmesh/clouds/india/juno/cacert.pem
+
+```
+mkdir ~/.cloudmesh/clouds/india/juno # create juno directory
+nano ~/.cloudmesh/clouds/india/juno/cacert.pem # Paste "cacert.pem" from india
+```
+
+4. Test heat commands 
+
+```
+heat stack-list
+```
+
+* reference: http://docs.rackspace.com/orchestration/api/v1/orchestration-getting-started/content/Install_Heat_Client.html
 
 ### 3-3 Usage
 
