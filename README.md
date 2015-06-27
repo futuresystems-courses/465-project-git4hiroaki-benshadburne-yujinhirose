@@ -39,7 +39,7 @@ Cloudmesh is installed
 1. Install OpenStack Heat Client using pip
 
 ```
-sudo pip install python-heatclient
+vm$ sudo pip install python-heatclient
 ```
 
 2. Read environment variables from openrc.sh
