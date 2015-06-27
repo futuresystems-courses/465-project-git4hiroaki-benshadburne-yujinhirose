@@ -36,6 +36,8 @@ Clone repository to your local directory adn move on `cloudmesh_dataload` direct
 
 ### 2-3 Usage
 
+This dataload plugin has simplest  functionality: download the data from a specified URL and delete data source. It is good for you to understand how cloudmesh plugins work.
+
 - `cm dataload start [-url=U]`
 
 This cm dataload command will start to download the data source by using `wget`. Default URL is set http://stat-computing.org/dataexpo/2009/2007.csv.bz2 but you can specify a URL of data source by using `-url=U` option.
