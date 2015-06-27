@@ -134,6 +134,16 @@ If you succeed to run this command appropriately, you can find your stack, named
 4.	Extract, transfer, and load datasets to Hadoop Distributed File System (HDFS)
 
 
+## Data source
+The data is Airline on-time performance data since our focus is to automate construction process for predicting airline delays. 
+
+
+
+## Technologies
+
+
+
+
 ## 5 Reference
 
 
