@@ -77,31 +77,30 @@ vm$ heat stack-list
 
 
 
-1) Make a copy of our project library from github. It can be found at
+1) Make a copy of our project repository and move on it. It can be found at
 https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
 
-Example command to copy library:
 ```
 git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
+cd 465-project-git4hiroaki-benshadburne-yujinhirose
 ```
 
-2) Change directories into our project folder.
+2) Edit "config.sh" to specify the location of public and private key if necessary.
 
-```
-cd github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
-```
-
-3) Edit the config.sh file to add in your username, location of public key and location of private key.
+As for "KeyName" you can check the key name registered in India with commands `nova keypair-list`
 
 ```
 nano config.sh
 ```
 
-4) Run bash file for setup "start-clusters.sh" on your bash.
+3) Run bash file for setup "start-clusters.sh" on your bash.
 
 ```
 source start-cluster.sh
 ```
+
+If you succeed to run this command appropriately, you can find your stack, named "flight-analysis-hadoop-[your name]" by `heat stack-list`
+
 
 ## 4 Heat-temlate
 
