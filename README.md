@@ -93,7 +93,7 @@ cd 465-project-git4hiroaki-benshadburne-yujinhirose
 
 3) Edit "config.sh" to specify the location of public and private key if necessary.
 
-As for "KeyName" you can check the key name registered in India with commands "nova keypair-list"
+As for "KeyName" you can check the key name registered in India with commands `nova keypair-list`
 
 ```
 nano config.sh
@@ -105,7 +105,7 @@ nano config.sh
 source start-cluster.sh
 ```
 
-If you succeed to run this command appropriately, you can find your stack, named "flight-analysis-hadoop-[your name]" by 'heat stack-list'
+If you succeed to run this command appropriately, you can find your stack, named "flight-analysis-hadoop-[your name]" by `heat stack-list`
 
 
 ## 4 Heat-temlate
