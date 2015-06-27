@@ -55,7 +55,7 @@ We need to copy certification information from india, which is specified by "OS_
 
 In Idia, 
 ```
-india$ cat $OS_CACERT
+india$ echo $OS_CACERT
 ```
 
 In your vm, paste the content of cacert.pem to ~/.cloudmesh/clouds/india/juno/cacert.pem
