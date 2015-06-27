@@ -91,7 +91,9 @@ git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-
 cd 465-project-git4hiroaki-benshadburne-yujinhirose
 ```
 
-3) Edit the config.sh file to add in your username, location of public key and location of private key.
+3) Edit "config.sh" to specify the location of public and private key if necessary.
+
+As for "KeyName" you can check the key name registered in India with commands "nova keypair-list"
 
 ```
 nano config.sh
