@@ -88,7 +88,7 @@ git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-
 2) Change directories into our project folder.
 
 ```
-cd github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git
+cd 465-project-git4hiroaki-benshadburne-yujinhirose
 ```
 
 3) Edit the config.sh file to add in your username, location of public key and location of private key.
