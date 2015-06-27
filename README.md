@@ -135,8 +135,7 @@ If you succeed to run this command appropriately, you can find your stack, named
 
 
 ## Data source
-The data is Airline on-time performance data since our focus is to automate construction process for predicting airline delays. 
-
+The data is Airline on-time performance data since our focus is to automate construction process for predicting airline delays. You can choose data source from 1987 to 2008 ([data source link]( http://stat-computing.org/dataexpo/2009/the-data.html)) Each of the data field is described as well.
 
 #### Sample of data
 | Year | Month | DayofMonth | DayOfWeek | DepTime | CRSDepTime | ArrTime | CRSArrTime | UniqueCarrier | FlightNum | TailNum | ActualElapsedTime | CRSElapsedTime | AirTime | ArrDelay | DepDelay | Origin | Dest | Distance | TaxiIn | TaxiOut | Cancelled | CancellationCode | Diverted | CarrierDelay | WeatherDelay | NASDelay | SecurityDelay | LateAircraftDelay |
@@ -147,10 +146,14 @@ The data is Airline on-time performance data since our focus is to automate cons
 
 ## Technologies
 
+* Hadoop
+* HDFS
+* Pig
+* Python with libraries (e.g., Pandas, Scikit-learn, Numpy, Matplotlib. PyDoop)
 
 
 
-## 5 Reference
+## Reference
 
 
 - Project reference "Predicting Airline Delays with Hadoop": http://cloudmesh.github.io/introduction_to_cloud_computing/projects/sample_project_airline_delays.html
