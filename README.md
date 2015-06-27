@@ -138,7 +138,7 @@ If you succeed to run this command appropriately, you can find your stack, named
 The data is Airline on-time performance data since our focus is to automate construction process for predicting airline delays. 
 
 
-### Sample of data
+#### Sample of data
 | Year | Month | DayofMonth | DayOfWeek | DepTime | CRSDepTime | ArrTime | CRSArrTime | UniqueCarrier | FlightNum | TailNum | ActualElapsedTime | CRSElapsedTime | AirTime | ArrDelay | DepDelay | Origin | Dest | Distance | TaxiIn | TaxiOut | Cancelled | CancellationCode | Diverted | CarrierDelay | WeatherDelay | NASDelay | SecurityDelay | LateAircraftDelay |
 |------|-------|------------|-----------|---------|------------|---------|------------|---------------|-----------|---------|-------------------|----------------|---------|----------|----------|--------|------|----------|--------|---------|-----------|------------------|----------|--------------|--------------|----------|---------------|-------------------|
 | 2008 | 1     | 3          | 4         | 2003    | 1955       | 2211    | 2225       | WN            | 335       | N712SW  | 128               | 150            | 116     | -14      | 8        | IAD    | TPA  | 810      | 4      | 8       | 0         |                  | 0        | NA           | NA           | NA       | NA            | NA                |
