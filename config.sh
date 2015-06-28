@@ -1,6 +1,7 @@
 #read -p "Please input your KeyName: " KeyName
 KeyName=hshioi-ubuntu-vm-key
 HEATUSERNAME=$OS_USERNAME
-HEATPUBKLOC=~/.ssh/id_rsa.pub
-HEATPVTKLOC=~/.ssh/id_rsa
+ssh-kegen -f temp.rsa -t -N ''
+HEATPUBKLOC=./temp.rsa.pub
+HEATPVTKLOC=./temp.rsa
 
