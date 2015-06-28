@@ -6,7 +6,8 @@ echo Creating Stack for $HEATUSERNAME
 # Please make sure to match the belwo finger prints
 # 1. ssh-keygen -lf ~/.ssh/id_rsa.pub
 # 2. nova keypair-list
-heat stack-create --template-file hadoop-cluster-airline-del-pred.yaml -P "KeyName=`cat $KeyName`;PublicKeyString='cat $HEATPUBKLOC';PrivateKeyString='cat $HEATPVTKLOC';Hadoop1Name="Hadoop1-$HEATUSERNAME";Hadoop2Name="Hadoop2-$HEATUSERNAME";Hadoop3Name="Hadoop3-$HEATUSERNAME"" analysis-hadoops-$HEATUSERNAME
+#heat stack-create --template-file hadoop-cluster-airline-del-pred.yaml -P "KeyName=`cat $KeyName`;PublicKeyString='cat $HEATPUBKLOC';PrivateKeyString='cat $HEATPVTKLOC';Hadoop1Name="Hadoop1-$HEATUSERNAME";Hadoop2Name="Hadoop2-$HEATUSERNAME";Hadoop3Name="Hadoop3-$HEATUSERNAME"" analysis-hadoops-$HEATUSERNAME
+heat stack-create --template-file hadoop-cluster-airline-del-pred.yaml -P "KeyName=$KeyName;PublicKeyString=`cat $HEATPUBKLOC`;PrivateKeyString=`cat $HEATPVTKLOC`;Hadoop1Name=Hadoop1-$HEATUSERNAME;Hadoop2Name=Hadoop2-$HEATUSERNAME;Hadoop3Name=Hadoop3-$HEATUSERNAME" analysis-hadoops3-$HEATUSERNAME
 
 
 
