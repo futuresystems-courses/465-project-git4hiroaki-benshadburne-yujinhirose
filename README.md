@@ -26,11 +26,11 @@ The goal of this project is to automate the task of creating virtual clusters on
 
 ### 2-2 Step-by-step installation manual
 
-Clone repository to your local directory adn move on `cloudmesh_dataload` directory, and move on that directory. Then install the cloudmesh_dataload plugin. You can check the installation by `cm help` command. 
+Clone repository to your local directory and move on `cloudmesh_dataload` directory, and move on that directory. Then install the cloudmesh_dataload plugin. You can check the installation by `cm help` command. 
 
 1. `git clone https://github.com/futuresystems/465-project-git4hiroaki-benshadburne-yujinhirose.git`
 2. `cd 465-project-git4hiroaki-benshadburne-yujinhirose/cloudmesh_dataload`
-3. Add `    - cloudmesh_deploy.plugins` as the last sentencein in `~/.cloudmesh/cmd3.yaml` 
+3. Add `    - cloudmesh_deploy.plugins` as the last sentence in in `~/.cloudmesh/cmd3.yaml` 
 4. `python setup.py install`
 5. `cm plugins add cloudmesh_dataload`
 
@@ -75,7 +75,7 @@ vm$ source  ~/.cloudmesh/clouds/india/openrc.sh
 
 We need to copy certification information from india, which is specified by "OS_CACERT" in "openrc.sh".
 
-In Idia, 
+In India, 
 ```
 india$ echo $OS_CACERT
 ```
